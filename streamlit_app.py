@@ -40,10 +40,13 @@ for faq in faqs:
     st.write(f"Q: {faq['question']}")
     st.write(f"A: {faq['answer']}")
     st.write("---")
-
+    
+# Generate unique widget ID using counter
+     widget_id = f"question_{count}"
+    
 # Allow the user to ask additional questions
 while True:
-    user_question = st.text_input("Ask another question:", key="question2")
+    user_question = st.text_input("Ask another question:", key=widget_id)
     if user_question:
         answer = ask_question(user_question)
         st.write(f"A: {answer}")
