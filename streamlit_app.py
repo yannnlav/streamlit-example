@@ -2,7 +2,7 @@ import openai
 import os
 import streamlit as st
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets("OPENAI_API_KEY")
 
 def ask_question(question):
     prompt = f"Q: {question}\nA:"
