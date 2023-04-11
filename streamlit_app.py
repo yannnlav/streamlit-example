@@ -1,7 +1,11 @@
-%env OPENAI_API_KEY=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
-
+import streamlit as st
 import openai
+import requests
 import os
+from PIL import Image
+from io import BytesIO
+
+%env OPENAI_API_KEY=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
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
