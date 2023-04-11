@@ -42,7 +42,7 @@ for faq in faqs:
     st.write("---")
     
 # Generate unique widget ID using counter
-     widget_id = f"question_{count}"
+    widget_id = f"question_{count}"
     
 # Allow the user to ask additional questions
 while True:
