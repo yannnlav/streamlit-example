@@ -43,10 +43,10 @@ for faq in faqs:
     
 # Allow the user to ask additional questions
 while True:
-    user_question = st.text_input("Ask another question:", key = "user_question")
+    user_question = st.text_input("Ask another question:", key=f"question_{len(faqs)}")
     if user_question:
         answer = ask_question(user_question)
         st.write(f"A: {answer}")
-    if st.button("Quit"):
+    if st.button("Quit", key="quit"):
         st.write("Thank you for using the chatbot. Goodbye!")
         break
