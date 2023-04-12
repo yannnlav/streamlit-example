@@ -43,7 +43,7 @@ for faq in faqs:
     
 # Allow the user to ask additional questions
 while True:
-    user_question = st.text_input("Ask another question:", key = "api_key")
+    user_question = st.text_input("Ask another question:", key = "user_question")
     if user_question:
         answer = ask_question(user_question)
         st.write(f"A: {answer}")
