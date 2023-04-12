@@ -48,6 +48,6 @@ while True:
     if user_question:
         answer = ask_question(user_question)
         st.write(f"A: {answer}")
-    if st.button("Quit", key="quit"):
+    if st.button("Quit", key=f"quit_{i}"):
         st.write("Thank you for using the chatbot. Goodbye!")
         break
