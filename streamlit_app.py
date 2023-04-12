@@ -23,12 +23,12 @@ st.write("If you have another question, you can type it in the box below.")
 
 # Define the FAQ questions and answers
 faqs = [
-    {"question_1": "What are the work hours?", "answer": ""},
-    {"question_2": "What are the company policies regarding sick leave?", "answer": ""},
-    {"question_3": "What is the dress code?", "answer": ""},
-    {"question_4": "What are the benefits offered by the company?", "answer": ""},
-    {"question_5": "Who do I contact if I have a question or concern?", "answer": ""},
-    {"question_6": "How often do performance evaluations occur?", "answer": ""},
+    {"question": "What are the work hours?", "answer": ""},
+    {"question": "What are the company policies regarding sick leave?", "answer": ""},
+    {"question": "What is the dress code?", "answer": ""},
+    {"question": "What are the benefits offered by the company?", "answer": ""},
+    {"question": "Who do I contact if I have a question or concern?", "answer": ""},
+    {"question": "How often do performance evaluations occur?", "answer": ""},
 ]
 
 # Populate the FAQ answers using OpenAI
@@ -40,10 +40,11 @@ for faq in faqs:
     st.write(f"Q: {faq['question']}")
     st.write(f"A: {faq['answer']}")
     st.write("---")
-    
-# Allow the user to ask additional questions
+
+i = len(faqs)
 while True:
-    user_question = st.text_input("Ask another question:")
+    user_question = st.text_input("Ask another question:", key=f"question_{i}")
+    i += 1
     if user_question:
         answer = ask_question(user_question)
         st.write(f"A: {answer}")
