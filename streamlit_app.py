@@ -44,7 +44,7 @@ for faq in faqs:
 i = len(faqs)
 while True:
     user_question = st.text_input("Ask another question:", key=f"question_{i}")
-    i += 1
+   # i += 1
     if user_question:
         answer = ask_question(user_question)
         st.write(f"A: {answer}")
